@@ -4,13 +4,12 @@ import lombok.Data;
 
 @Data
 public class UserFromDatabase {
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String customerName;
     private Integer employeeNumber;
-    private Integer customerNumber;
-    private String customerLastName;
-    private String customerFirstName;
-
+    private String lastName;
+    private String firstName;
+    private String extension;
+    private String email;
+    private String officeCode;
+    private Integer reportsTo;
+    private String jobTitle;
 }
