@@ -50,19 +50,31 @@ public class UserService {
         return userRepository.getUsers();
     }
 
-    public Boolean deleteUser(String employeesNumber) {
-        return userRepository.deleteUser(employeesNumber);
-    }
-
-    public Boolean insertUser(String employeeNumber) {
-        return userRepository.insertUser(employeeNumber);
-    }
-
-    public Boolean getUser(String employeeNumber) {
-        return userRepository.getUser(employeeNumber);
-    }
-
-    public Boolean updateUser(String employeeNumber) {
-        return userRepository.updateUser(employeeNumber);
+    public List<UserFromDatabase> searchUserFromDatabase(String firstName, String lastName) {
+        return userRepository.getFindUser(firstName, lastName);
     }
 }
+
+
+
+
+
+
+
+//
+//    public Boolean deleteUser(String employeesNumber) {
+//        return userRepository.deleteUser(employeesNumber);
+//    }
+//
+//    public Boolean insertUser(String employeeNumber) {
+//        return userRepository.insertUser(employeeNumber);
+//    }
+//
+//    public Boolean getUser(String employeeNumber) {
+//        return userRepository.getUser(employeeNumber);
+//    }
+//
+//    public Boolean updateUser(String employeeNumber) {
+//        return userRepository.updateUser(employeeNumber);
+//    }
+

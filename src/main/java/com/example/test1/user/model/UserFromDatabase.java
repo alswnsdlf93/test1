@@ -8,8 +8,8 @@ public class UserFromDatabase {
     private String lastName;
     private String email;
     private String customerName;
-    private int employeeNumber;
-    private int customerNumber;
+    private Integer employeeNumber;
+    private Integer customerNumber;
     private String customerLastName;
     private String customerFirstName;
 

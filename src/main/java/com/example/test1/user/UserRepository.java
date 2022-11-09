@@ -11,9 +11,12 @@ public interface UserRepository {
     List<UserFromDatabase> getUsers();
 
     Boolean deleteUser(String employeesNumber);
-    Boolean insertUser(String employeesNumber);
-    Boolean getUser(String employeesNumber);
     Boolean updateUser(String employeesNumber);
+
+    List<UserFromDatabase> getFindUser(String firstName, String lastName);
 }
 
+
+//    Boolean insertUser(String employeesNumber);
+//    Boolean getUser(String employeesNumber);
 

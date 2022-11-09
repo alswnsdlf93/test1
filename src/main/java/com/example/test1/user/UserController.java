@@ -9,6 +9,7 @@ import java.util.List;
 @RestController
 public class UserController {
     private UserService userService;
+
 //    private Object employeeNumber;
 
     public UserController(UserService userService) {
@@ -17,50 +18,59 @@ public class UserController {
     }
 
     @GetMapping("/user")
-    public Boolean user() {
-
-        return true;
-    }
-
-//    @GetMapping("/user")
-//    public int user() {
-//
-//        return this.employeeNumber = employeeNumber;
-//    }
-
-    @DeleteMapping("/user/{employeesNumber}")
-    public Boolean deleteUser(
-            @PathVariable String employeesNumber
+    public List<UserFromDatabase> getUser(
+            @RequestParam(name = "firstName") String firstName,
+            @RequestParam(name = "lastName") String lastName
     ) {
-        return userService.deleteUser(employeesNumber);
-    }
-    @PutMapping
-    public Boolean insertUser(
-            @PathVariable String employeeNumber
-    ) {
-        return userService.insertUser(employeeNumber);
-    }
-    @GetMapping
-    public Boolean getUser(
-            @PathVariable String employeeNumber
-    ) {
-        return userService.getUser(employeeNumber);
-    } // 왜 중국어가 계속 나오는걸까요ㅠ
-    @PostMapping
-    public Boolean updateUser(
-            @PathVariable String employeeNumber
-    ) {
-        return userService.updateUser(employeeNumber);
-    }
-
-    @GetMapping("/users")
-    public List<User> users() {
-        return userService.findAll();
-
-    }
-
-    @GetMapping("/userFromDatabase")
-    public List<UserFromDatabase> userFromDatabase() {
-        return userService.findAllFromDatabase();
+       return userService.searchUserFromDatabase(firstName, lastName);
     }
 }
+
+//    @GetMapping("/user")
+//    public Boolean user() {
+//
+//        return true;
+//    }
+//
+////    @GetMapping("/user")
+////    public int user() {
+////
+////        return this.employeeNumber = employeeNumber;
+////    }
+//
+//    @DeleteMapping("/user/{employeesNumber}")
+//    public Boolean deleteUser(
+//            @PathVariable String employeesNumber
+//    ) {
+//        return userService.deleteUser(employeesNumber);
+//    }
+//    @PutMapping
+//    public Boolean insertUser(
+//            @PathVariable String employeeNumber
+//    ) {
+//        return userService.insertUser(employeeNumber);
+//    }
+//    @GetMapping
+//    public Boolean getUser(
+//            @PathVariable String employeeNumber
+//    ) {
+//        return userService.getUser(employeeNumber);
+//    } // 왜 에러 메시지에 중국어가 계속 나오는걸까요ㅠ
+//    @PostMapping
+//    public Boolean updateUser(
+//            @PathVariable String employeeNumber
+//    ) {
+//        return userService.updateUser(employeeNumber);
+//    }
+//
+//    @GetMapping("/users")
+//    public List<User> users() {
+//        return userService.findAll();
+//
+//    }
+//
+//    @GetMapping("/userFromDatabase")
+//    public List<UserFromDatabase> userFromDatabase() {
+//        return userService.findAllFromDatabase();
+//    }
+//}
