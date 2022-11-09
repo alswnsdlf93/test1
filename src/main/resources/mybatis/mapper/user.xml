@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.test1.user.UserRepository">
+
+    <select id="getUsers" resultType="com.example.test1.user.model.UserFromDatabase">
+    SELECT firstName, lastName, email, employeeNumber FROM employees;
+    </select>
+    <delete id="deleteUser">
+    DELETE FROM employees WHERE employeeNumber = #{employeesNumber};
+    </delete>
+    <insert id="insertUser">
+    INSERT INTO employees(employeeNumber, lastName, firstName, extension, email, officeCode, reportsTo, jobTitle)
+    VALUES (1052, 'JUN', 'MIN', 'x4602', 'alswnsdlf93@aipers.com', 1, 1002, 'VP Sales');
+    </insert>
+    <select id="getUser" resultType="java.lang.Boolean">
+    GET firstName, lastName from employees WHERE employeeNumber = #{employeesNumber}
+    </select>
+    <update id="updateUser"/>
+
+</mapper>
+
+
+<!--         1. 직원(employees) 입력 기능 작성하기-->
+<!--           - employee 테이블에 직원 데이터를 등록하는 라우터를 추가해주세요-->
+<!--           method : post-->
+<!--           url : /user-->
+<!--           payloadType : JSON-->
+<!--    POST http://localhost:####/rest/api/v1/User
+{
+    "employeeNumber": "1111",
+    "lastName": "b",
+    "firstName": "a",
+    "extention": x4444,
+    "email" : sadf@gmail.com,
+    "officeCode" : 1
+    "reportsTo" : 1002,
+    "jobTitle": VP Sales
+    ...
+ }-->
+
+<!--         2. 직원 검색 기능 작성하기 검색 조건(성, 이름)-->
+<!--           method : GET-->
+<!--           url : /user-->
+<!--           payloadType : queryString-->
+<!--
+GET firstName, lastName from employees WHERE employeeNumber = #{employeesNumber}
+
+
+
+-->
+
+<!--         3. 직원 정보 변경 기능 작성하기-->
+<!--           method : PUT-->
+<!--           url : /user-->
+<!--           payloadType : queryString-->
+<!--
+
+UPDATE [table] SET [column] = '변경할 값' WHERE [condition]
+
+
+-->
