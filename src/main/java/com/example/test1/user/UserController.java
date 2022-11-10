@@ -3,6 +3,8 @@ package com.example.test1.user;
 import com.example.test1.user.model.User;
 import com.example.test1.user.model.UserFromDatabase;
 import com.example.test1.user.model.UserFromDatabase;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.InsertProvider;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
