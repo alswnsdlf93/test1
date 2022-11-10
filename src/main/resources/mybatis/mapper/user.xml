@@ -25,6 +25,7 @@
     <select id="getFindUser" resultType="com.example.test1.user.model.UserFromDatabase">
         select * from   employees WHERE lastName = #{lastName}
     </select>
+    <insert id="insertUser"/>
 
 </mapper>
 

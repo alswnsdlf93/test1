@@ -2,6 +2,7 @@ package com.example.test1.user;
 
 import com.example.test1.user.model.User;
 import com.example.test1.user.model.UserFromDatabase;
+import com.example.test1.user.model.UserFromDatabase;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

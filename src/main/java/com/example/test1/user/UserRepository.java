@@ -13,7 +13,9 @@ public interface UserRepository {
     Boolean deleteUser(String employeesNumber);
     Boolean updateUser(String employeesNumber);
 
+
     List<UserFromDatabase> getFindUser(String firstName, String lastName);
+    List<UserFromDatabase> insertUser(String firstName, String lastName);
 }
 
 
