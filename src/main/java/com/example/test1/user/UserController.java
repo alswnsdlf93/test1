@@ -27,6 +27,12 @@ public class UserController {
     ) {
        return userService.searchUserFromDatabase(firstName, lastName);
     }
+
+    @PostMapping("/user")
+    public Integer insertUser (
+            @RequestBody UserFromDatabase userFromDatabase){
+        return userService.insertUser(userFromDatabase);
+    }
 }
 
 //    @GetMapping("/user")

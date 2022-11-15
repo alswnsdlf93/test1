@@ -53,8 +53,8 @@ public class UserService {
     public List<UserFromDatabase> searchUserFromDatabase(String firstName, String lastName) {
         return userRepository.getFindUser(firstName, lastName);
     }
-    public List<UserFromDatabase> insertNewUser(String firstName, String lastName) {
-        return userRepository.insertUser(firstName, lastName);
+    public Integer insertUser(UserFromDatabase userFromDatabase) {
+        return userRepository.insertUser(userFromDatabase);
     }
 }
 

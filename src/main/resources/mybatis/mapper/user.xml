@@ -25,8 +25,10 @@
     <select id="getFindUser" resultType="com.example.test1.user.model.UserFromDatabase">
         select * from   employees WHERE lastName = #{lastName}
     </select>
-    <insert id="insertUser"/>
-
+    <insert id="insertUser">
+        insert into employees(employeeNumber, lastName, firstName, extension, email, officeCode, reportsTo, jobTitle)
+        values(#{employeeNumber}, #{lastName}, #{firstName}, #{extension}, #{email}, #{officeCode}, #{reportsTo}, #{jobTitle});
+    </insert>
 </mapper>
 
 
