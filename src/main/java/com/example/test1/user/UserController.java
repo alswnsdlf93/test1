@@ -33,6 +33,13 @@ public class UserController {
             @RequestBody UserFromDatabase userFromDatabase){
         return userService.insertUser(userFromDatabase);
     }
+
+    @DeleteMapping("/user/{employeeNumber}")
+    public Integer deleteUser(
+            @PathVariable Integer employeeNumber
+    ) {
+        return userService.deleteUser(employeeNumber);
+    }
 }
 
 //    @GetMapping("/user")

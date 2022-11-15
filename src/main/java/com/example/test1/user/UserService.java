@@ -56,6 +56,9 @@ public class UserService {
     public Integer insertUser(UserFromDatabase userFromDatabase) {
         return userRepository.insertUser(userFromDatabase);
     }
+    public Integer deleteUser(Integer employeeNumber) {
+        return userRepository.deleteUser(employeeNumber);
+    }
 }
 
 
