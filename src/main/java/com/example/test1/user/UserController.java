@@ -13,8 +13,6 @@ import java.util.List;
 public class UserController {
     private UserService userService;
 
-//    private Object employeeNumber;
-
     public UserController(UserService userService) {
 
         this.userService = userService;
@@ -45,6 +43,8 @@ public class UserController {
     public Integer updateUser(
             @PathVariable Integer employeeNumber,
             @RequestBody UserFromDatabase userFromDatabase) {
+        UserService.update(userFromDatabase);
+//        UserFromDatabase user = UserService.(user, employeeNumber);
         return userService.updateUser(employeeNumber);
     }
 }
@@ -78,7 +78,7 @@ public class UserController {
 //            @PathVariable String employeeNumber
 //    ) {
 //        return userService.getUser(employeeNumber);
-//    } // 왜 에러 메시지에 중국어가 계속 나오는걸까요ㅠ
+//    }
 //    @PostMapping
 //    public Boolean updateUser(
 //            @PathVariable String employeeNumber

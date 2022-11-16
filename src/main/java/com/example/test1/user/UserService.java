@@ -25,6 +25,11 @@ public class UserService {
         users.add(new User(3, "Sam", new Date()));
     }
 
+    public static void update(UserFromDatabase userFromDatabase) {
+        return;
+    }
+
+
     public List<User> findAll(){
         return users;
     }

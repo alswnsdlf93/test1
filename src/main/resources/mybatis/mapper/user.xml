@@ -19,13 +19,13 @@
 <!--    GET firstName, lastName from employees WHERE employeeNumber = #{employeesNumber}-->
 <!--    </select>-->
     <update id="updateUser">
-        UPDATE employees SET jobTitle = "devel" WHERE employeeNumber = #{employeeNumber};
+        UPDATE employees SET jobTitle = "developer" WHERE employeeNumber = #{employeeNumber};
     </update>
 <!--    <select id="findUser" resultType="com.example.test1.user.model.UserFromDatabase">-->
 <!--        select * from  employees WHERE lastName = #{lastName}-->
 <!--    </select>-->
     <select id="getFindUser" resultType="com.example.test1.user.model.UserFromDatabase">
-        select * from   employees WHERE lastName = #{lastName}
+        select * from employees WHERE lastName = #{lastName}
     </select>
     <insert id="insertUser">
         insert into employees(employeeNumber, lastName, firstName, extension, email, officeCode, reportsTo, jobTitle)
