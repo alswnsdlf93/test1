@@ -59,6 +59,9 @@ public class UserService {
     public Integer deleteUser(Integer employeeNumber) {
         return userRepository.deleteUser(employeeNumber);
     }
+    public Integer updateUser(Integer employeeNumber) {
+        return userRepository.updateUser(employeeNumber);
+    }
 }
 
 

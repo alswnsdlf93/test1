@@ -10,12 +10,10 @@ import java.util.List;
 public interface UserRepository {
     List<UserFromDatabase> getUsers();
 
-
-    Boolean updateUser(String employeesNumber);
-
     List<UserFromDatabase> getFindUser(String firstName, String lastName);
     Integer insertUser(UserFromDatabase userFromDatabase);
     Integer deleteUser(Integer employeeNumber);
+    Integer updateUser(Integer employeeNumber);
 }
 
 

@@ -18,7 +18,9 @@
 <!--    <select id="getUser" resultType="java.lang.Boolean">-->
 <!--    GET firstName, lastName from employees WHERE employeeNumber = #{employeesNumber}-->
 <!--    </select>-->
-    <update id="updateUser"/>
+    <update id="updateUser">
+        UPDATE employees SET jobTitle = "devel" WHERE employeeNumber = #{employeeNumber};
+    </update>
 <!--    <select id="findUser" resultType="com.example.test1.user.model.UserFromDatabase">-->
 <!--        select * from  employees WHERE lastName = #{lastName}-->
 <!--    </select>-->

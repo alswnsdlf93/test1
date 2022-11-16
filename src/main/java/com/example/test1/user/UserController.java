@@ -40,6 +40,13 @@ public class UserController {
     ) {
         return userService.deleteUser(employeeNumber);
     }
+
+    @PutMapping("/user/{employeeNumber}")
+    public Integer updateUser(
+            @PathVariable Integer employeeNumber,
+            @RequestBody UserFromDatabase userFromDatabase) {
+        return userService.updateUser(employeeNumber);
+    }
 }
 
 //    @GetMapping("/user")
