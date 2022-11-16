@@ -9,15 +9,9 @@ import java.util.List;
 @Mapper
 public interface UserRepository {
     List<UserFromDatabase> getUsers();
-
     List<UserFromDatabase> getFindUser(String firstName, String lastName);
     Integer insertUser(UserFromDatabase userFromDatabase);
     Integer deleteUser(Integer employeeNumber);
     Integer updateUser(Integer employeeNumber);
 }
-
-
-
-//    Boolean insertUser(String employeesNumber);
-//    Boolean getUser(String employeesNumber);
 
