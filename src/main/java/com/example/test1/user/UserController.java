@@ -43,7 +43,7 @@ public class UserController {
     public Integer updateUser(
             @PathVariable Integer employeeNumber,
             @RequestBody UserFromDatabase userFromDatabase) {
-        UserService.update(userFromDatabase);
+        UserService.update(userFromDatabase); // 추가
 //        UserFromDatabase user = UserService.(user, employeeNumber);
         return userService.updateUser(employeeNumber);
     }

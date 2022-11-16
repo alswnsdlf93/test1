@@ -27,7 +27,7 @@ public class UserService {
 
     public static void update(UserFromDatabase userFromDatabase) {
         return;
-    }
+    } // 추가
 
 
     public List<User> findAll(){
